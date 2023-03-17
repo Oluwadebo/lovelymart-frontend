@@ -6,7 +6,6 @@ import Registration from "./component/Registration";
 import Admin from "./component/Admin";
 import RegistAdmin from "./component/RegistAdmin";
 import Viewproduct from "./component/Viewproduct";
-import Addtocart from "./component/Addtocart";
 
 function App() {
   return (

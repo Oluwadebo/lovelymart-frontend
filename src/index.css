@@ -1,8 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Livvic";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f0f0f0;
@@ -142,17 +141,16 @@ code {
 }
 .scr {
   position: fixed;
-  background: #16325a;
-  background: rgba(31, 55, 121, 0.589);
-  backdrop-filter: blur(5px);
+  background: #1e4174;
+  /* background: rgba(31, 55, 121, 0.589); */
+  /* backdrop-filter: blur(5px); */
   border-radius: 10px;
   border: 0px;
-  border-radius: 40%;
   color: #fff;
   bottom: 10px;
   right: 10px;
-  width: 70px;
-  font-size: 40px;
+  width: 40px;
+  height: 40px;
   z-index: 1;
 }
 .sig {
@@ -313,7 +311,7 @@ code {
   font-size: 10px;
 }
 .product-botttom h3 {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
 }
 .product-botttom h5 {
@@ -408,4 +406,29 @@ code {
   margin-left: 20px;
   border: none;
   box-shadow: none !important;
+}
+.default-btn {
+  display: inline-block;
+  padding: 2px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #16325a;
+  border-radius: 50px;
+  border: solid #0278ff;
+  text-decoration: none;
+  z-index: 1;
+  transition: background-color 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.default-btn:hover {
+  background-color: #000000;
+  transition: background-color 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  background-image: linear-gradient(to top right, #000000);
+}
+.default-btn a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.lni p a {
+  text-decoration: none;
 }

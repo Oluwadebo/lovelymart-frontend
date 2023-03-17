@@ -67,7 +67,7 @@ const Navbar = () => {
                     </div>
                 </nav>
                 <div className="">
-                    <button onClick={scrollup} className="scr">^</button>
+                    <button onClick={scrollup} className="fa fa-angle-up scr"></button>
                 </div>
             </div>
         </>

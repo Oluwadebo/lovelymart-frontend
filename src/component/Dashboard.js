@@ -131,12 +131,8 @@ const Dashboard = () => {
                                                 <button type="button" className="btn btn-secondary" title="Add to wish list">
                                                     <i className="fa fa-heart"></i>
                                                 </button>
-                                                <button type="button" onClick={addtocart} className="btn btn-secondary" title="Add to Cart">
-                                                    <i className="fa fa-shopping-cart"></i>
-                                                </button>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div className="product-botttom text-center">
                                         <i className="fa fa-star"></i>
@@ -146,6 +142,7 @@ const Dashboard = () => {
                                         <i className="fa fa-star-half"></i>
                                         <h3>Female Dress</h3>
                                         <h5>$40.00</h5>
+                                        <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
                                     </div>
                                 </div>
                                 <div className="col-md-3">
@@ -159,9 +156,6 @@ const Dashboard = () => {
                                                 <button type="button" className="btn btn-secondary" title="Add to wish list">
                                                     <i className="fa fa-heart"></i>
                                                 </button>
-                                                <button type="button" onClick={addtocart} className="btn btn-secondary" title="Add to Cart">
-                                                    <i className="fa fa-shopping-cart"></i>
-                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -173,6 +167,7 @@ const Dashboard = () => {
                                         <i className="fa fa-star"></i>
                                         <h3>Men Dress</h3>
                                         <h5>$70.00</h5>
+                                        <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
                                     </div>
                                 </div>
                                 <div className="col-md-3">
@@ -186,9 +181,6 @@ const Dashboard = () => {
                                                 <button type="button" className="btn btn-secondary" title="Add to wish list">
                                                     <i className="fa fa-heart"></i>
                                                 </button>
-                                                <button type="button" onClick={addtocart} className="btn btn-secondary" title="Add to Cart">
-                                                    <i className="fa fa-shopping-cart"></i>
-                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -199,6 +191,7 @@ const Dashboard = () => {
                                         <i className="fa fa-star"></i>
                                         <h3>Women Dress</h3>
                                         <h5>$60.00</h5>
+                                        <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
                                     </div>
                                 </div>
                                 <div className="col-md-3">
@@ -212,9 +205,6 @@ const Dashboard = () => {
                                                 <button type="button" className="btn btn-secondary" title="Add to wish list">
                                                     <i className="fa fa-heart"></i>
                                                 </button>
-                                                <button type="button" onClick={addtocart} className="btn btn-secondary" title="Add to Cart">
-                                                    <i className="fa fa-shopping-cart"></i>
-                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -225,6 +215,7 @@ const Dashboard = () => {
                                         <i className="fa fa-star-half"></i>
                                         <h3>Women Black Jins Shirt</h3>
                                         <h5>$50.00</h5>
+                                        <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
                                     </div>
                                 </div>
                             </div>
@@ -250,14 +241,12 @@ const Dashboard = () => {
                                                     <button type="button" className="btn btn-secondary" title="Add to wish list">
                                                         <i className="fa fa-heart"></i>
                                                     </button>
-                                                    <button type="button" onClick={() => addtocart(item._id)} className="btn btn-secondary" title="Add to Cart">
-                                                        <i className="fa fa-shopping-cart"></i>
-                                                    </button>
                                                 </div>
                                             </div>
                                             <div className="product-botttom text-center">
                                                 <h3>{item.product}</h3>
                                                 <h5>{item.price}</h5>
+                                                <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -270,7 +259,7 @@ const Dashboard = () => {
                     <section className="website-feature">
                         <div className="container">
                             <div className="row">
-                                <div className="col-md-3 feature-box">
+                                <div className="col-md-4 feature-box">
                                     <div className="imgBx">
                                         <img src={footballboots} />
                                         <div className="feature-text">
@@ -278,7 +267,7 @@ const Dashboard = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-md-3 feature-box">
+                                <div className="col-md-4 feature-box">
                                     <div className="imgBx">
                                         <img src={footballboots} />
                                         <div className="feature-text">
@@ -286,15 +275,7 @@ const Dashboard = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-md-3 feature-box">
-                                    <div className="imgBx">
-                                        <img src={footballboots} />
-                                        <div className="feature-text">
-                                            <p><b>Get free delivery, on every </b>order your make.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-3 feature-box">
+                                <div className="col-md-4 feature-box">
                                     <div className="imgBx">
                                         <img src={footballboots} />
                                         <div className="feature-text">
