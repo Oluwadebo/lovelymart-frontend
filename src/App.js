@@ -17,7 +17,6 @@ function App() {
         <Route path="/RegistAdmin" element={<RegistAdmin />} />
         <Route path="/Admin" element={<Admin />} />
         <Route path="/Viewproduct" element={<Viewproduct />} />
-        <Route path="/Addtocart" element={<Addtocart />} />
         <Route path="/Dashboard" element={<Navigate to="/" />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -68,34 +68,10 @@ const Dashboard = () => {
         }
     }
 
-    // useEffect(() => {
-    //   window.addEventListener('load',()=>{
-    //     document.querySelector('#clicked').addEventListener('click')
-    //   })
-    // }, [])
-
     return (
         <>
             <Navbar />
             <div className="container-fluid mt-5 pt-4 mb-4 p-0 m-0">
-                {/* <div id="carouselExampleDark" className="carousel slide" data-bs-ride="true">
-                    <div className="carousel-indicators">
-                        <button data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active"></button>
-                        <button data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
-                        <button data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
-                    </div>
-                    <div className="carousel-inner">
-                        <div className="carousel-item active" data-bs-interval="1000">
-                            <img src={house3} className="w-100 h-50" alt="..." />
-                        </div>
-                        <div className="carousel-item" data-bs-interval="2000">
-                            <img src={house4} className="w-100 h-50" alt="..." />
-                        </div>
-                        <div className="carousel-item" data-bs-interval="2000">
-                            <img src={house5} className="w-100 h-50" alt="..." />
-                        </div>
-                    </div>
-                </div> */}
                 <div id="carouselExampleDark" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" id='clicked'></button>
