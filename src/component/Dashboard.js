@@ -246,7 +246,7 @@ const Dashboard = () => {
                                             <div className="product-botttom text-center">
                                                 <h3>{item.product}</h3>
                                                 <h5>{item.price}</h5>
-                                                <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
+                                                <button type="submit" className="default-btn btn-bg-two"><a href={item.Link}>Shop Now</a></button>
                                             </div>
                                         </div>
                                     </div>
