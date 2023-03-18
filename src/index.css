@@ -142,8 +142,6 @@ code {
 .scr {
   position: fixed;
   background: #1e4174;
-  /* background: rgba(31, 55, 121, 0.589); */
-  /* backdrop-filter: blur(5px); */
   border-radius: 10px;
   border: 0px;
   color: #fff;
@@ -431,4 +429,9 @@ code {
 }
 .lni p a {
   text-decoration: none;
+}
+.select{
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 5px;
 }

@@ -10,6 +10,7 @@ const Upload = () => {
   const [price, setprice] = useState("");
   const [Err, setErr] = useState("")
   const adminId = localStorage.adminId
+  const [selectedOption, setSelectedOption] = useState("");
 
   const getfile = (e) => {
     let myfile = e.target.files[0];
@@ -19,17 +20,26 @@ const Upload = () => {
       setfile(reader.result);
     }
   }
+  // let value = e.value;
+  // let text = e.options[e.selectedIndex].text;
+  const handleSelectChange = (e) => {
+    let selectedOpt = document.getElementById("selectOptions");
+    setSelectedOption(selectedOpt.value);
+    console.log(selectedOpt.value);
+  };
+
   const upload = () => {
-    if (file != "" && product != "" && price != "") {
+    if (file != "" && product != "" && price != "" && selectedOption != "") {
       setErr("")
       setloader(prev => true)
+      console.log(selectedOption);
       const userdata = { file, product, price, adminId }
       axios.post(`${baseUrl}files`, userdata).then((credentials) => {
         if (credentials) {
           let info = credentials.data.message;
           if (info == "Upload successfuly") {
             setloader(prev => false)
-            setErr("Upload successfuly")  
+            setErr("Upload successfuly")
             window.location.reload()
           } else {
             setloader(prev => false)
@@ -39,15 +49,17 @@ const Upload = () => {
       })
     } else {
       setloader(prev => false)
-      if (file == "" && product == "" && price == "") {
+      if (file == "" && product == "" && price == "" && selectedOption == "") {
         setErr("All input field are required")
       } else if (file == "") {
         setErr("file input field is required")
       } else if (product == "") {
         setErr("product name input field is required")
+      } else if (price == "") {
+        setErr("product price input field is required")
       } else {
-        if (price == "") {
-          setErr("product price input field is required")
+        if (selectedOption == "") {
+          setErr("Category input field is required")
         }
       }
     }
@@ -70,6 +82,12 @@ const Upload = () => {
               <input type="file" className="form-control my-2" onChange={(e) => getfile(e)} accept='image/*' />
               <input type="text" className="form-control my-2" placeholder="Product name" onChange={(e) => setproduct(e.target.value)} />
               <input type="text" className="form-control my-2" placeholder="Product price (add your currency)" onChange={(e) => setprice(e.target.value)} />
+              <select id="selectOptions" className="select" value={selectedOption} onChange={(e) => handleSelectChange(e)}>
+                <option value="">Select your Category</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
               <button className="btn form-control py-3 mt-3 asdb" onClick={upload}>Upload
                 {loader && (
                   <div className="spin">
