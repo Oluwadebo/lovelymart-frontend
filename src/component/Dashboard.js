@@ -4,17 +4,21 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import { baseUrl } from "./endpoint";
 import Navbar from './Navbar'
-import house3 from "./asset/house3.jpg"
-import house4 from "./asset/house4.jpg"
-import house5 from "./asset/house5.jpg"
-import go4 from "./asset/go4.jfif"
-import go2 from "./asset/go2.jfif"
 import go5 from "./asset/go5.jfif"
-import SouthKorea from "./asset/Hookup-in-South-Korea-quickly.jpg"
 import sidebarbanner from "./asset/sidebar_banner_img.jpg"
-import shopbanner2 from "./asset/shop_banner2.jpg"
-import footballboots from "./asset/football_boots_198704.jpg"
+import caro from "./asset/caro.jpg"
+import caro1 from "./asset/caro1.jpg"
+import caro2 from "./asset/caro2.jpg"
+import zoom from "./asset/zoom (1).jpg"
+import zoom1 from "./asset/zoom (2).jpg"
+import zoom3 from "./asset/zoom (4).jpg"
+import zoom4 from "./asset/zoom (5).jpg"
+import original from "./asset/original.png"
+import returnoninvestment from "./asset/return-on-investment.png"
+import debitcard from "./asset/debit-card.png"
+import streetwear from "./asset/street wear design t-shirt.jpg"
 import Footer from './Footer';
+// import zoom4 from "./asset/street wear design t-shirt.jpg"
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -28,8 +32,6 @@ const Dashboard = () => {
         axios.get(`${baseUrl}goods`).then((data) => {
             if (data) {
                 setfiles(data.data.result);
-                // console.log(data.data.result);
-                // setpageloader(prev => false)
             }
         })
     }, [])
@@ -81,17 +83,17 @@ const Dashboard = () => {
                     <div className="carousel-inner">
                         <div className="carousel-item active" data-bs-interval="2000">
                             <div className="imggi">
-                                <img src={house3} className="w-100" alt="..." />
+                                <img src={caro} className="w-100" alt="..." />
                             </div>
                         </div>
                         <div className="carousel-item" data-bs-interval="2000">
                             <div className="imggi">
-                                <img src={house4} className="w-100" alt="..." />
+                                <img src={caro1} className="w-100" alt="..." />
                             </div>
                         </div>
                         <div className="carousel-item" data-bs-interval="2000">
                             <div className="imggi">
-                                <img src={house5} className="w-100" alt="..." />
+                                <img src={caro2} className="w-100" alt="..." />
                             </div>
                         </div>
                     </div>
@@ -101,13 +103,13 @@ const Dashboard = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-4">
-                                    <img src={go2} />
+                                    <img src={zoom} />
                                 </div>
                                 <div className="col-md-4">
-                                    <img src={go4} />
+                                    <img src={zoom4} />
                                 </div>
                                 <div className="col-md-4">
-                                    <img src={SouthKorea} />
+                                    <img src={zoom1} />
                                 </div>
                             </div>
                         </div>
@@ -123,7 +125,7 @@ const Dashboard = () => {
                                 <div className="col-md-3">
                                     <div className="product-top">
                                         <div className="imgBx">
-                                            <img src={go4} className="h-100" />
+                                            <img src={zoom3} className="h-100" />
                                             <div className="overlay-right">
                                                 <button type="button" className="btn btn-secondary" title="view product">
                                                     <i className="fa fa-eye"></i>
@@ -140,7 +142,7 @@ const Dashboard = () => {
                                         <i className="fa fa-star"></i>
                                         <i className="fa fa-star"></i>
                                         <i className="fa fa-star-half"></i>
-                                        <h3>Female Dress</h3>
+                                        <h3>HeadPhone</h3>
                                         <h5>$40.00</h5>
                                         <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
                                     </div>
@@ -197,7 +199,7 @@ const Dashboard = () => {
                                 <div className="col-md-3">
                                     <div className="product-top">
                                         <div className="imgBx">
-                                            <img src={shopbanner2} />
+                                            <img src={streetwear} />
                                             <div className="overlay-right">
                                                 <button type="button" className="btn btn-secondary" title="view product">
                                                     <i className="fa fa-eye"></i>
@@ -213,7 +215,7 @@ const Dashboard = () => {
                                         <i className="fa fa-star"></i>
                                         <i className="fa fa-star"></i>
                                         <i className="fa fa-star-half"></i>
-                                        <h3>Women Black Jins Shirt</h3>
+                                        <h3>Street wear design t-shirt</h3>
                                         <h5>$50.00</h5>
                                         <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
                                     </div>
@@ -261,7 +263,7 @@ const Dashboard = () => {
                             <div className="row">
                                 <div className="col-md-4 feature-box">
                                     <div className="imgBx">
-                                        <img src={footballboots} />
+                                        <img src={original} />
                                         <div className="feature-text">
                                             <p><b>100% Original items </b>are available at our company.</p>
                                         </div>
@@ -269,7 +271,7 @@ const Dashboard = () => {
                                 </div>
                                 <div className="col-md-4 feature-box">
                                     <div className="imgBx">
-                                        <img src={footballboots} />
+                                        <img src={returnoninvestment} />
                                         <div className="feature-text">
                                             <p><b>Return within 30 days </b>of recieving your order.</p>
                                         </div>
@@ -277,7 +279,7 @@ const Dashboard = () => {
                                 </div>
                                 <div className="col-md-4 feature-box">
                                     <div className="imgBx">
-                                        <img src={footballboots} />
+                                        <img src={debitcard} />
                                         <div className="feature-text">
                                             <p><b>Pay Online through multiple </b>options (card/Net banking)</p>
                                         </div>

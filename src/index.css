@@ -175,6 +175,7 @@ code {
 }
 .logo {
   height: 40px;
+  width: 100%;
   margin: 5px 10px;
 }
 .sty {
@@ -201,7 +202,7 @@ code {
   color: #fff;
 }
 .coles {
-  background: #16325a !important;
+  background: #2196F3 !important;
   color: white;
 }
 .cart {
@@ -245,8 +246,9 @@ code {
 }
 .imggi {
   position: relative;
-  height: 80vh;
+  height: 90vh;
   width: 100%;
+  background-position: center;
 }
 .imggi img {
   position: absolute;

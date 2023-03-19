@@ -1,5 +1,4 @@
 import React from 'react'
-import footballboots from "./asset/football_boots_198704.jpg"
 
 const Footer = () => {
     let d = new Date();

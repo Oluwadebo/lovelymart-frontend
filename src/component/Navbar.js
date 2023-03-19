@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from 'react-router-dom'
 import amaricanexpress from "./asset/amarican_express.png"
+import logo from "./asset/logo.png"
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -25,7 +26,7 @@ const Navbar = () => {
                 <nav className="navbar navbar-expand-lg bg-light fixed-top coles">
                     <div className="container">
                         <a className="navbar-brand">
-                            <img src={amaricanexpress} alt="amaricanexpress" className="logo" />
+                            <img src={logo} alt="amaricanexpress" className="logo" />
                         </a>
                         <button
                             className="navbar-toggler"
