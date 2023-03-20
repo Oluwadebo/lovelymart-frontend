@@ -18,7 +18,6 @@ import returnoninvestment from "./asset/return-on-investment.png"
 import debitcard from "./asset/debit-card.png"
 import streetwear from "./asset/street wear design t-shirt.jpg"
 import Footer from './Footer';
-// import zoom4 from "./asset/street wear design t-shirt.jpg"
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -122,7 +121,7 @@ const Dashboard = () => {
                                 <h2>On Sale</h2>
                             </div>
                             <div className="row">
-                                <div className="col-md-3">
+                                <div className="col-md-3 mt-3 mt-md-0">
                                     <div className="product-top">
                                         <div className="imgBx">
                                             <img src={zoom3} className="h-100" />
@@ -147,7 +146,7 @@ const Dashboard = () => {
                                         <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
                                     </div>
                                 </div>
-                                <div className="col-md-3">
+                                <div className="col-md-3 mt-3 mt-md-0">
                                     <div className="product-top">
                                         <div className="imgBx">
                                             <img src={go5} />
@@ -172,7 +171,7 @@ const Dashboard = () => {
                                         <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
                                     </div>
                                 </div>
-                                <div className="col-md-3">
+                                <div className="col-md-3 mt-3 mt-md-0">
                                     <div className="product-top">
                                         <div className="imgBx">
                                             <img src={sidebarbanner} />
@@ -196,7 +195,7 @@ const Dashboard = () => {
                                         <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
                                     </div>
                                 </div>
-                                <div className="col-md-3">
+                                <div className="col-md-3 mt-3 mt-md-0">
                                     <div className="product-top">
                                         <div className="imgBx">
                                             <img src={streetwear} />
@@ -232,7 +231,7 @@ const Dashboard = () => {
                             </div>
                             <div className="row">
                                 {files.map((item, index) => (
-                                    <div className="col-md-3">
+                                    <div className="col-md-3 mt-2 mt-md-0">
                                         <div className="product-top">
                                             <div className="imgBx">
                                                 <img src={item.file} className="h-100" />
