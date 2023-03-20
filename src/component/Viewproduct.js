@@ -22,13 +22,13 @@ const Viewproduct = () => {
             navigate("/")
         }
     }, [])
-    const addtocart = (val) => {
-        if (customer) {
-            console.log(val);
-        } else {
-            navigate("/Registration")
-        }
-    }
+    // const addtocart = (val) => {
+    //     if (customer) {
+    //         // console.log(val);
+    //     } else {
+    //         navigate("/Registration")
+    //     }
+    // }
 
     return (
         <>
@@ -51,7 +51,8 @@ const Viewproduct = () => {
                                             <h2 className='text-white'>Details</h2>
                                         </div>
                                         <h2>{item.product}</h2>
-                                        <p>Product Code: IRSC198704</p>
+                                        <p>Product Code: {item._id}</p>
+                                        <h5 className='float'>{item.description}</h5>
                                         <i className="fa fa-star"></i>
                                         <i className="fa fa-star"></i>
                                         <i className="fa fa-star"></i>
@@ -59,8 +60,8 @@ const Viewproduct = () => {
                                         <i className="fa fa-star"></i>
                                         <p className="price">{item.price}</p>
                                         <p><b>Availability:</b> In Stock</p>
-                                        <p><b>Condition:</b> New</p>
-                                        <button type="button" className="btn btn-primary" onClick={() => addtocart(item._id)}>Add to Cart</button>
+                                        {/* <button type="button" className="btn btn-primary" onClick={() => addtocart(item._id)}>Add to Cart</button> */}
+                                        <button type="submit" className="default-btn btn-bg-two"><a href={item.Link}>Add to Cart</a></button>
                                     </div>
                                 </div>
                             ))}
