@@ -21,11 +21,11 @@ import Footer from './Footer';
 
 const Dashboard = () => {
     const navigate = useNavigate();
-    const [customers, setcustomers] = useState([])
+    // const [customers, setcustomers] = useState([])
     const [files, setfiles] = useState([])
-    const [cart, setcart] = useState([])
-    const customer = localStorage.customer;
-    const customerId = localStorage.customerId;
+    // const [cart, setcart] = useState([])
+    // const customer = localStorage.customer;
+    // const customerId = localStorage.customerId;
 
     useEffect(() => {
         axios.get(`${baseUrl}goods`).then((data) => {
@@ -35,33 +35,33 @@ const Dashboard = () => {
         })
     }, [])
 
-    const addtocart = (val) => {
-        if (customer) {
-            axios.get(`${baseUrl}dashboard`,
-                {
-                    headers: {
-                        "Authorization": `Bearer ${customer}`,
-                        "Content-type": "application/json",
-                        "Accept": "application/json"
-                    }
-                }).then((data) => {
-                    if (data) {
-                        let Err = data.data.message;
-                        if (Err == "Valid Token") {
-                            setcustomers(data.data.result[0]);
-                            localStorage.customerId = data.data.result[0]._id
-                            axios.post(`${baseUrl}addtocart`, { val, customerId })
-                        } else {
-                            localStorage.removeItem('customer')
-                            localStorage.removeItem('customerId')
-                            navigate("/Registration")
-                        }
-                    }
-                })
-        } else {
-            navigate("/Registration")
-        }
-    }
+    // const addtocart = (val) => {
+    //     if (customer) {
+    //         axios.get(`${baseUrl}dashboard`,
+    //             {
+    //                 headers: {
+    //                     "Authorization": `Bearer ${customer}`,
+    //                     "Content-type": "application/json",
+    //                     "Accept": "application/json"
+    //                 }
+    //             }).then((data) => {
+    //                 if (data) {
+    //                     let Err = data.data.message;
+    //                     if (Err == "Valid Token") {
+    //                         setcustomers(data.data.result[0]);
+    //                         localStorage.customerId = data.data.result[0]._id
+    //                         axios.post(`${baseUrl}addtocart`, { val, customerId })
+    //                     } else {
+    //                         localStorage.removeItem('customer')
+    //                         localStorage.removeItem('customerId')
+    //                         navigate("/Registration")
+    //                     }
+    //                 }
+    //             })
+    //     } else {
+    //         navigate("/Registration")
+    //     }
+    // }
     const viewproduct = (val) => {
         if (val) {
             localStorage.Viewproduct = val
@@ -102,13 +102,13 @@ const Dashboard = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-4">
-                                    <img src={zoom} />
+                                    <img src={zoom} alt="zoom" />
                                 </div>
                                 <div className="col-md-4">
-                                    <img src={zoom4} />
+                                    <img src={zoom4} alt="zoom" />
                                 </div>
                                 <div className="col-md-4">
-                                    <img src={zoom1} />
+                                    <img src={zoom1} alt="zoom" />
                                 </div>
                             </div>
                         </div>
@@ -124,7 +124,7 @@ const Dashboard = () => {
                                 <div className="col-md-3 mt-3 mt-md-0">
                                     <div className="product-top">
                                         <div className="imgBx">
-                                            <img src={zoom3} className="h-100" />
+                                            <img src={zoom3} className="h-100" alt='zoom' />
                                             <div className="overlay-right">
                                                 <button type="button" className="btn btn-secondary" title="view product">
                                                     <i className="fa fa-eye"></i>
@@ -143,13 +143,13 @@ const Dashboard = () => {
                                         <i className="fa fa-star-half"></i>
                                         <h3>HeadPhone</h3>
                                         <h5>$40.00</h5>
-                                        <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
+                                        <button type="submit" className="default-btn btn-bg-two"><a href="#">Shop Now</a></button>
                                     </div>
                                 </div>
                                 <div className="col-md-3 mt-3 mt-md-0">
                                     <div className="product-top">
                                         <div className="imgBx">
-                                            <img src={go5} />
+                                            <img src={go5} alt="zoom" />
                                             <div className="overlay-right">
                                                 <button type="button" className="btn btn-secondary" title="view product">
                                                     <i className="fa fa-eye"></i>
@@ -168,13 +168,13 @@ const Dashboard = () => {
                                         <i className="fa fa-star"></i>
                                         <h3>Men Dress</h3>
                                         <h5>$70.00</h5>
-                                        <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
+                                        <button type="submit" className="default-btn btn-bg-two"><a href="#">Shop Now</a></button>
                                     </div>
                                 </div>
                                 <div className="col-md-3 mt-3 mt-md-0">
                                     <div className="product-top">
                                         <div className="imgBx">
-                                            <img src={sidebarbanner} />
+                                            <img src={sidebarbanner} alt="zoom" />
                                             <div className="overlay-right">
                                                 <button type="button" className="btn btn-secondary" title="view product">
                                                     <i className="fa fa-eye"></i>
@@ -192,13 +192,13 @@ const Dashboard = () => {
                                         <i className="fa fa-star"></i>
                                         <h3>Women Dress</h3>
                                         <h5>$60.00</h5>
-                                        <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
+                                        <button type="submit" className="default-btn btn-bg-two"><a href="#">Shop Now</a></button>
                                     </div>
                                 </div>
                                 <div className="col-md-3 mt-3 mt-md-0">
                                     <div className="product-top">
                                         <div className="imgBx">
-                                            <img src={streetwear} />
+                                            <img src={streetwear} alt="zoom" />
                                             <div className="overlay-right">
                                                 <button type="button" className="btn btn-secondary" title="view product">
                                                     <i className="fa fa-eye"></i>
@@ -216,7 +216,7 @@ const Dashboard = () => {
                                         <i className="fa fa-star-half"></i>
                                         <h3>Street wear design t-shirt</h3>
                                         <h5>$50.00</h5>
-                                        <button type="submit" className="default-btn btn-bg-two"><a href="">Shop Now</a></button>
+                                        <button type="submit" className="default-btn btn-bg-two"><a href="#">Shop Now</a></button>
                                     </div>
                                 </div>
                             </div>
@@ -234,7 +234,7 @@ const Dashboard = () => {
                                     <div className="col-md-3 mt-2 mt-md-0">
                                         <div className="product-top">
                                             <div className="imgBx">
-                                                <img src={item.file} className="h-100" />
+                                                <img src={item.file} className="h-100" alt='zoom' />
                                                 <div className="overlay-right">
                                                     <button type="button" className="btn btn-secondary" onClick={() => viewproduct(item._id)} title="view product">
                                                         <i className="fa fa-eye"></i>
@@ -244,9 +244,8 @@ const Dashboard = () => {
                                                     </button>
                                                 </div>
                                             </div>
-                                            <div className="product-botttom text-center">
-                                                <h3>{item.product}</h3>
-                                                <h5>{item.price}</h5>
+                                            <div className="product-botttom text-center mt-3">
+                                                <h3><span className='float1'>{item.product}</span> <span className='float2'>{item.price}</span></h3><br /><br />
                                                 <button type="submit" className="default-btn btn-bg-two"><a href={item.Link}>Shop Now</a></button>
                                             </div>
                                         </div>
@@ -262,7 +261,7 @@ const Dashboard = () => {
                             <div className="row">
                                 <div className="col-md-4 feature-box">
                                     <div className="imgBx">
-                                        <img src={original} />
+                                        <img src={original} alt="zoom" />
                                         <div className="feature-text">
                                             <p><b>100% Original items </b>are available at our company.</p>
                                         </div>
@@ -270,7 +269,7 @@ const Dashboard = () => {
                                 </div>
                                 <div className="col-md-4 feature-box">
                                     <div className="imgBx">
-                                        <img src={returnoninvestment} />
+                                        <img src={returnoninvestment} alt="zoom" />
                                         <div className="feature-text">
                                             <p><b>Return within 30 days </b>of recieving your order.</p>
                                         </div>
@@ -278,7 +277,7 @@ const Dashboard = () => {
                                 </div>
                                 <div className="col-md-4 feature-box">
                                     <div className="imgBx">
-                                        <img src={debitcard} />
+                                        <img src={debitcard} alt="zoom" />
                                         <div className="feature-text">
                                             <p><b>Pay Online through multiple </b>options (card/Net banking)</p>
                                         </div>

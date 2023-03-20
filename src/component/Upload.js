@@ -37,7 +37,7 @@ const Upload = () => {
           if (info == "Upload successfuly") {
             setloader(prev => false)
             setErr("Upload successfuly")
-            window.location.reload()
+            // window.location.reload()
           } else {
             setloader(prev => false)
             setErr("Upload failed")

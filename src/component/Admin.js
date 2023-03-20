@@ -58,7 +58,7 @@ const Admin = () => {
         })
     };
     const edit = (val) => {
-        console.log(val);
+        // console.log(val);
     }
 
     return (
@@ -91,9 +91,9 @@ const Admin = () => {
                                                     <div className="imgBx">
                                                         <img src={item.file} className="h-100" />
                                                     </div>
-                                                    <div className="product-botttom text-center">
-                                                        <h3>{item.product}</h3>
-                                                        <h5>{item.price}</h5>
+                                                    <div className="product-botttom mt-2">
+                                                        <h3><span className='float1'>{item.product}</span> <span  className='float2'>{item.price}</span></h3><br />
+                                                        <h5 className='float'>{item.description}</h5>
                                                     </div>
                                                     <div className="row">
                                                         <div className="col-6">

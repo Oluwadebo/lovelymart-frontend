@@ -307,12 +307,21 @@ code {
   transition: 0.5s;
 }
 .product-botttom .fa {
-  color: #16325a;
+  color: #FDBC00;
   font-size: 10px;
 }
 .product-botttom h3 {
   font-size: 15px;
   font-weight: bold;
+}
+.product-botttom .float1{
+  float: left;
+}
+.product-botttom .float2{
+  float: right;
+}
+.product-botttom .float{
+  text-align: justify;
 }
 .product-botttom h5 {
   font-size: 15px;
