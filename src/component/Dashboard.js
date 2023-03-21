@@ -121,7 +121,7 @@ const Dashboard = () => {
                                 <h2>On Sale</h2>
                             </div>
                             <div className="row">
-                                <div className="col-md-3 mt-3 mt-md-0">
+                                <div className="col-lg-3 col-md-6 my-3 mt-md-0">
                                     <div className="product-top">
                                         <div className="imgBx">
                                             <img src={zoom3} className="h-100" alt='zoom' />
@@ -146,7 +146,7 @@ const Dashboard = () => {
                                         <button type="submit" className="default-btn btn-bg-two"><a href="#">Shop Now</a></button>
                                     </div>
                                 </div>
-                                <div className="col-md-3 mt-3 mt-md-0">
+                                <div className="col-lg-3 col-md-6 my-3 mt-md-0">
                                     <div className="product-top">
                                         <div className="imgBx">
                                             <img src={go5} alt="zoom" />
@@ -171,7 +171,7 @@ const Dashboard = () => {
                                         <button type="submit" className="default-btn btn-bg-two"><a href="#">Shop Now</a></button>
                                     </div>
                                 </div>
-                                <div className="col-md-3 mt-3 mt-md-0">
+                                <div className="col-lg-3 col-md-6 my-3 mt-md-0">
                                     <div className="product-top">
                                         <div className="imgBx">
                                             <img src={sidebarbanner} alt="zoom" />
@@ -195,7 +195,7 @@ const Dashboard = () => {
                                         <button type="submit" className="default-btn btn-bg-two"><a href="#">Shop Now</a></button>
                                     </div>
                                 </div>
-                                <div className="col-md-3 mt-3 mt-md-0">
+                                <div className="col-lg-3 col-md-6 my-3 mt-md-0">
                                     <div className="product-top">
                                         <div className="imgBx">
                                             <img src={streetwear} alt="zoom" />
@@ -231,7 +231,7 @@ const Dashboard = () => {
                             </div>
                             <div className="row">
                                 {files.map((item, index) => (
-                                    <div className="col-md-3 mt-2 mt-md-0">
+                                    <div className="col-lg-3 col-md-6 my-3 mt-md-0">
                                         <div className="product-top">
                                             <div className="imgBx">
                                                 <img src={item.file} className="h-100" alt='zoom' />
