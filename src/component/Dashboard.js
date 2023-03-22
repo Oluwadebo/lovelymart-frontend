@@ -99,7 +99,7 @@ const Dashboard = () => {
                 </div>
                 <div className="">
                     <section className="feature-categories">
-                        <div className="container">
+                        <div className="container-fluid">
                             <div className="row">
                                 <div className="col-md-4">
                                     <img src={zoom} alt="zoom" />
@@ -116,7 +116,7 @@ const Dashboard = () => {
                 </div>
                 <div className=" onsale">
                     <section className="on-sale">
-                        <div className="container">
+                        <div className="container-fluid">
                             <div className="title-box">
                                 <h2>On Sale</h2>
                             </div>
@@ -225,7 +225,7 @@ const Dashboard = () => {
                 </div>
                 <div className="new-product">
                     <section className="new-product">
-                        <div className="container">
+                        <div className="container-fluid">
                             <div className="title-box">
                                 <h2>New Arrivals</h2>
                             </div>
@@ -257,7 +257,7 @@ const Dashboard = () => {
                 </div>
                 <div className="website-feature">
                     <section className="website-feature">
-                        <div className="container">
+                        <div className="container-fluid">
                             <div className="row">
                                 <div className="col-md-4 feature-box">
                                     <div className="imgBx">
