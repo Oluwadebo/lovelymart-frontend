@@ -6,7 +6,7 @@ import { baseUrl } from "./endpoint";
 import Navbar from './Navbar'
 import go5 from "./asset/go5.jfif"
 import sidebarbanner from "./asset/sidebar_banner_img.jpg"
-import caro from "./asset/caro.jpg"
+import caro from "./asset/caro4.jpg"
 import caro1 from "./asset/caro1.jpg"
 import caro2 from "./asset/caro2.jpg"
 import zoom from "./asset/zoom (1).jpg"
